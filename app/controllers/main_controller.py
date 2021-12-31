@@ -7,11 +7,11 @@ router = APIRouter(prefix='/api/v0', tags=["Decimal to Roman"])
 security = APIKeyHeader(name="api_key")
 
 
-@router.post('/num2roman/{number}')
+@router.get('/num2roman/{number}')
 async def forecast_icing_classification(number: int, api_key: APIKeyHeader = Depends(security)):
     ''' Gets a integer and returns the roman numeral '''
     # ckeck authentication
-    if not _security.validate_api_key(api_key, method = 'basic_auth'):
+    if not _security.validate_api_key(api_key, method = 'hmac'):
         raise HTTPException(status_code=401, detail='Access denied. Invalid "Api-Key" value in the request headers.')
     
     try:

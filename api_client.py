@@ -13,7 +13,7 @@ def call_roman_api(n: int):
     '''send request'''
 
     url_request = '{0}/num2roman/{1}'.format(URL_API, n)
-    response = requests.post(url_request,
+    response = requests.get(url_request,
                             headers = headers,
                             verify=False, stream=False)
 
