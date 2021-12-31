@@ -1,6 +1,10 @@
 # Convert decimal number to roman numerals
 ### Task
 Create a simple serverless REST API that given a decimal number returns the roman number.
+Try out using small client in api_client.py
+Please contact me to get the API_KEY if you want to access the online aws lambda
+https://75azg34o8g.execute-api.eu-west-1.amazonaws.com/dev
+
 
 ### Goals
 - Deploy as AWS Lambda function

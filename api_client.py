@@ -4,7 +4,9 @@ import requests
 import os
 load_dotenv()
 
-URL_API = 'http://127.0.0.1:8000/api/v0' # FastAPI
+#URL_API = 'http://127.0.0.1:8000/api/v0' # FastAPI dev
+
+URL_API = 'https://75azg34o8g.execute-api.eu-west-1.amazonaws.com/dev/api/v0'
 headers={'api_key': os.environ['API_KEY']}  
 
 def call_roman_api(n: int):

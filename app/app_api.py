@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Request, Response
 from app.controllers import main_controller
-
+from mangum import Mangum
 description = """
 This API helps you do awesome stuff. 🚀
 
@@ -28,3 +28,5 @@ app.include_router(main_controller.router)
 @app.get("/", tags=["Root"])
 async def root():
     return {"message": "This is the root of num2roman API!"}
+
+handler = Mangum(app)
