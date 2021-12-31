@@ -69,8 +69,8 @@ class Int2RomanConverter:
                 (str) the number as a roman numeral
         '''
         if not isinstance(n, int):
-            raise TypeError("n was expecting an int, but received {0}".format(n))
+            raise TypeError("input was expecting an int, but received {0}".format(n))
         if n < 1 or n > 4999:
-            raise ValueError("n was expected between 1 and 4999, but received {0}".format(n))
+            raise ValueError("input was expected between 1 and 4999, but received {0}".format(n))
 
         return self.__private_convert_int_to_roman(n)
